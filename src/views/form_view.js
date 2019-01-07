@@ -3,7 +3,7 @@ const FormView = function(){
 
 };
 
-FormView.prototype.bindEvent = function(){
+FormView.prototype.bindEvents = function(){
   const form = document.querySelector('#prime-checker-form');
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -11,3 +11,5 @@ FormView.prototype.bindEvent = function(){
     PubSub.publish('#FormView:number-submitted', inputtedNumber)
   })
 }
+
+module.exports = FormView;
